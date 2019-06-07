@@ -41,8 +41,8 @@ public class ClassroomEndPoint {
 	@Path("/deleteTrainee")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteTrainee(@PathParam("TraineeId") int traineeId) {
-		return service.deleteTrainee(traineeId);
+	public String deleteTrainee(@PathParam("TraineeId") int id) {
+		return service.deleteTrainee(id);
 	}
 	
 	

@@ -8,5 +8,5 @@ public interface ClassroomRepository {
 
 	String createTrainee(String trainee);
 	
-	String deleteTrainee(int traineeId);
+	String deleteTrainee(int id);
 }

@@ -30,8 +30,8 @@ public class ClassroomMapRepository implements ClassroomRepository {
 		return json.returnMessage("New trainee created");
 	}
 
-	public String deleteTrainee(int traineeId) {
-		classroomMap.remove((Integer) traineeId);
+	public String deleteTrainee(int id) {
+		classroomMap.remove((Integer) id);
 		return json.returnMessage("Trainee deleted");
 	}
 

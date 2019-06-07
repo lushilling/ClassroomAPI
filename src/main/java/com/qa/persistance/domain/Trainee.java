@@ -11,7 +11,7 @@ public class Trainee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int traineeId;
+	private int id;
 	@Column(length = 200)
 	private String traineeName;
 	@Column(length = 2)
@@ -25,18 +25,18 @@ public class Trainee {
 
 	public Trainee(int traineeId, String traineeName, int classroomId, String trainerName) {
 		super();
-		this.traineeId = traineeId;
+		this.id = traineeId;
 		this.traineeName = traineeName;
 		this.classroomId = classroomId;
 		this.trainerName = trainerName;
 	}
 
 	public int getTraineeId() {
-		return traineeId;
+		return id;
 	}
 
 	public void setTraineeId(int traineeId) {
-		this.traineeId = traineeId;
+		this.id = traineeId;
 	}
 
 	public String getTraineeName() {
