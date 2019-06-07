@@ -19,4 +19,10 @@ public class ClassroomServiceImplementaion implements ClassroomService {
 		return classroomRepo.getTrainee(id);
 	}
 
+
+	@Override
+	public String createTrainee(String trainee) {
+		return classroomRepo.createTrainee(trainee);
+	}
+
 }
