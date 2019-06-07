@@ -5,13 +5,13 @@ import java.util.Map;
 
 import javax.enterprise.inject.Alternative;
 
-import com.qa.persistance.domain.Classroom;
+import com.qa.persistance.domain.Trainee;
 import com.qa.util.JSONUtil;
 
 @Alternative
 public class ClassroomMapRepository implements ClassroomRepository {
 
-	Map<Integer, Classroom> classroomMap = new HashMap<Integer, Classroom>();
+	Map<Integer, Trainee> classroomMap = new HashMap<Integer, Trainee>();
 
 	private JSONUtil json;
 
@@ -24,11 +24,15 @@ public class ClassroomMapRepository implements ClassroomRepository {
 
 	}
 
-	
 	public String createTrainee(String trainee) {
-		Classroom newTrainee = json.getObjectForJSON(trainee, Classroom.class);
+		Trainee newTrainee = json.getObjectForJSON(trainee, Trainee.class);
 		classroomMap.put(newTrainee.getTraineeId(), newTrainee);
-		return "New trainee created";
+		return json.returnMessage("New trainee created");
+	}
+
+	public String deleteTrainee(int traineeId) {
+		classroomMap.remove((Integer) traineeId);
+		return json.returnMessage("Trainee deleted");
 	}
 
 }

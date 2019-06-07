@@ -7,4 +7,6 @@ public interface ClassroomRepository {
 	String getTrainee(int id);
 
 	String createTrainee(String trainee);
+	
+	String deleteTrainee(int traineeId);
 }
