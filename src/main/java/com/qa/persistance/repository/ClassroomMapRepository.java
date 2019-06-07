@@ -24,4 +24,11 @@ public class ClassroomMapRepository implements ClassroomRepository {
 
 	}
 
+	
+	public String createTrainee(String trainee) {
+		Classroom newTrainee = json.getObjectForJSON(trainee, Classroom.class);
+		classroomMap.put(newTrainee.getTraineeId(), newTrainee);
+		return "New trainee created";
+	}
+
 }
