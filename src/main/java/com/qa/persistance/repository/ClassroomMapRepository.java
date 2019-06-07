@@ -12,11 +12,16 @@ import com.qa.util.JSONUtil;
 public class ClassroomMapRepository implements ClassroomRepository {
 
 	Map<Integer, Classroom> classroomMap = new HashMap<Integer, Classroom>();
-	
-	private JSONUtil util;
-	
+
+	private JSONUtil json;
+
 	public String reviewAllTrainees() {
-		return util.getJSONForObject(classroomMap);
+		return json.getJSONForObject(classroomMap);
+	}
+
+	public String getTrainee(int id) {
+		return json.getJSONForObject(classroomMap.get(id));
+
 	}
 
 }
