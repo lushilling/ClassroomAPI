@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Classroom {
+public class Trainee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,16 +19,16 @@ public class Classroom {
 	@Column(length = 200)
 	private String trainerName;
 
-	public Classroom() {
+	public Trainee() {
 
 	}
 
-	public Classroom(int traineeId, String traineeName, int classroomId, String trainerName) {
+	public Trainee(int traineeId, String traineeName, int classroomId, String trainerName) {
 		super();
 		this.traineeId = traineeId;
 		this.traineeName = traineeName;
 		this.classroomId = classroomId;
-		this.setTrainerName(trainerName);
+		this.trainerName = trainerName;
 	}
 
 	public int getTraineeId() {
