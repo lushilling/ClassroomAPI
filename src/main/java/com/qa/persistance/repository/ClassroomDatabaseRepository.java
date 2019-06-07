@@ -25,4 +25,9 @@ public class ClassroomDatabaseRepository implements ClassroomRepository {
 		return json.getJSONForObject(allTrainees);
 	}
 
+
+	public String getTrainee(int id) {
+		return json.getJSONForObject(em.find(Classroom.class, id));
+	}
+
 }
