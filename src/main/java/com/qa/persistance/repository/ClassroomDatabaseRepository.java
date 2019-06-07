@@ -30,8 +30,8 @@ public class ClassroomDatabaseRepository implements ClassroomRepository {
 		return json.returnMessage("Trainee created");
 	}
 
-	public String deleteTrainee(int traineeId) {
-		em.remove(traineeId);
+	public String deleteTrainee(int id) {
+		em.remove(id);
 		return json.returnMessage("Trainee deleted");
 	}
 

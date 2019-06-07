@@ -27,8 +27,8 @@ public class ClassroomServiceImplementaion implements ClassroomService {
 
 
 	@Override
-	public String deleteTrainee(int traineeId) {
-		return classroomRepo.deleteTrainee(traineeId);
+	public String deleteTrainee(int id) {
+		return classroomRepo.deleteTrainee(id);
 	}
 
 }
