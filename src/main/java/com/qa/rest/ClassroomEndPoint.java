@@ -10,20 +10,20 @@ import javax.ws.rs.Produces;
 
 import com.qa.business.service.ClassroomService;
 
-@Path("/classroom")
+@Path("classroom/")
 public class ClassroomEndPoint {
 
 	@Inject
 	private ClassroomService service;
 
-	@Path("/reviewAllTrainees")
+	@Path("reviewAllTrainees")
 	@GET
 	@Produces({ "application/json" })
 	public String reviewAllTrainees() {
 		return service.reviewAllTrainees();
 	}
 
-	@Path("/getTrainee")
+	@Path("getTrainee")
 	@GET
 	@Produces({ "appliation/json" })
 	public String getTrainee(@PathParam("id") int id) {
@@ -31,17 +31,17 @@ public class ClassroomEndPoint {
 
 	}
 	
-	@Path("/createTrainee")
+	@Path("createTrainee")
 	@POST
 	@Produces({ "application/json" })
 	public String createAccount(String trainee) {
 		return service.createTrainee(trainee);
 	}
 	
-	@Path("/deleteTrainee")
+	@Path("deleteTrainee/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteTrainee(@PathParam("TraineeId") int id) {
+	public String deleteTrainee(@PathParam("id") int id) {
 		return service.deleteTrainee(id);
 	}
 	

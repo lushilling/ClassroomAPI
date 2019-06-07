@@ -9,12 +9,12 @@ public class ClassroomServiceImplementaion implements ClassroomService {
 	@Inject
 	private ClassroomRepository classroomRepo;
 	
-	
+	@Override
 	public String reviewAllTrainees() {
 		return classroomRepo.reviewAllTrainees();
 	}
 
-
+	@Override
 	public String getTrainee(int id) {
 		return classroomRepo.getTrainee(id);
 	}

@@ -27,12 +27,12 @@ public class ClassroomMapRepository implements ClassroomRepository {
 	public String createTrainee(String trainee) {
 		Trainee newTrainee = json.getObjectForJSON(trainee, Trainee.class);
 		classroomMap.put(newTrainee.getTraineeId(), newTrainee);
-		return json.returnMessage("New trainee created");
+		return "New trainee created";
 	}
 
 	public String deleteTrainee(int id) {
 		classroomMap.remove((Integer) id);
-		return json.returnMessage("Trainee deleted");
+		return "Trainee deleted";
 	}
 
 }
